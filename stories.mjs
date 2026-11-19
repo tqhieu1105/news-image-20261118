@@ -1,14 +1,10 @@
 // Editorial selection: events on, or reporting first published on, 18 November 2026.
-// Two explicit headline lines let the small newspaper preserve qualifications.
+// Headline text and timing notes are kept separate from the newspaper layout.
 const js18 = 'https://www.justsecurity.org/165038/early-edition-november-18-2026/';
 const js19 = 'https://www.justsecurity.org/165250/early-edition-november-19-2026/';
 const guardian = (section, slug) => `https://www.theguardian.com/${section}/2026/nov/18/${slug}`;
 const aj = (section, slug) => `https://www.aljazeera.com/${section}/2026/11/18/${slug}`;
 const germany = 'https://www.dw.com/en/germany-news-merzs-coalition-agrees-on-electricity-tax-cut/live-79976869';
-
-export const sections = [
-  'WAR & DIPLOMACY', 'PEOPLE & POWER', 'MONEY & MACHINES', 'PLANET & CULTURE',
-];
 
 export const stories = [
   {
@@ -211,8 +207,58 @@ export const stories = [
     basis: 'first_report', timing: 'New Save the Children analysis reported November 18; compares UN-verified 2015 and 2025 incidents.',
     sources: [guardian('global-development', 'aid-denial-humanitarian-children-save-the-children-un')],
   },
+  {
+    id: 41, lines: ['William and Catherine', 'meet Modi in India'], icon: 'indiavisit', region: 'South Asia', field: 'Diplomacy and culture',
+    basis: 'event', timing: 'Wednesday visit to Modi in New Delhi; BBC published November 18 at 20:07 UTC.',
+    sources: ['https://www.bbc.com/news/articles/cq62ped2ypy4o'],
+  },
+  {
+    id: 42, lines: ['South Africa’s', 'X publisher settlement'], icon: 'publishers', region: 'Africa', field: 'Media and competition',
+    basis: 'event', timing: 'Competition Commission settlement and xAI undertaking announced November 18.',
+    sources: ['https://www.compcom.co.za/wp-content/uploads/2026/11/Media-Statement-Commission-reaches-settlement-agreement-with-XCorp-and-undertaking-with-XAI-18-November-2026.pdf'],
+  },
+  {
+    id: 43, lines: ['Lammy urges UK', 'to rejoin the EU'], icon: 'ukrejoin', region: 'Europe', field: 'Politics and trade',
+    basis: 'event', timing: 'Wednesday BBC Radio 4 interview, reported November 18 at 09:03 UTC; an appeal, not a government decision.',
+    sources: ['https://www.bbc.co.uk/news/articles/cm9q8jx05q3go'],
+  },
+  {
+    id: 44, lines: ['Brazil clears', 'Transnordestina works'], icon: 'brazilrail', region: 'South America', field: 'Infrastructure',
+    basis: 'event', timing: 'TCU decision Wednesday allows resumption of the Salgueiro–Suape railway works.',
+    sources: ['https://www.cnnbrasil.com.br/infra/tcu-libera-retomada-das-obras-da-transnordestina-em-pernambuco/'],
+  },
+  {
+    id: 45, lines: ['German court rejects', 'BSW recount appeal'], icon: 'bswcourt', region: 'Europe', field: 'Elections and justice',
+    basis: 'event', timing: 'Constitutional Court ruling in DW’s November 18 live coverage; appeal concerned the 2025 election.',
+    sources: [germany],
+  },
+  {
+    id: 46, lines: ['Trump meets Marcos', 'in Manila'], icon: 'manila', region: 'Southeast Asia', field: 'Diplomacy',
+    basis: 'event', timing: 'Wednesday meeting before Trump left for China.',
+    sources: [js18, aj('news', 'donald-trump-meets-longtime-friend-imelda-marcos-during-philippines-visit')],
+  },
+  {
+    id: 47, lines: ['Alcaraz beats Medvedev', 'at ATP Finals'], icon: 'tennis', region: 'Europe / Global', field: 'Sport',
+    basis: 'event', timing: 'Wednesday ATP Finals group match in Turin.',
+    sources: ['https://www.theguardian.com/sport/live/2026/nov/18/carlos-alcaraz-v-daniil-medvedev-atp-finals-tennis-group-stage-live'],
+  },
+  {
+    id: 48, lines: ['German minister visits', 'Armenia, Azerbaijan'], icon: 'caucasus', region: 'Europe / Asia', field: 'Diplomacy and energy',
+    basis: 'event', timing: 'DW explicitly dates Wadephul’s visits to Wednesday; discussions concern peace and energy.',
+    sources: [germany],
+  },
+  {
+    id: 49, lines: ['Garcia orders Trump', 'allies to keep records'], icon: 'oversight', region: 'North America', field: 'Government accountability',
+    basis: 'event', timing: 'Twelve record-preservation letters sent Wednesday ahead of planned House investigations.',
+    sources: [guardian('us-news', 'robert-garcia-trump-records-investigations')],
+  },
+  {
+    id: 50, lines: ['FAA chief takes blame', 'for flight outage'], icon: 'faachief', region: 'North America', field: 'Transport and technology',
+    basis: 'event', timing: 'Bedford’s Wednesday remarks concern the previous Friday’s ground stop; no new nationwide stoppage implied.',
+    sources: [guardian('world', 'faa-sean-duffy-flight-stoppage')],
+  },
 ];
 
-if (stories.length !== 40 || new Set(stories.map(s => s.id)).size !== 40) {
-  throw new Error('The front page must contain exactly forty distinct stories.');
+if (stories.length !== 50 || new Set(stories.map(s => s.id)).size !== 50) {
+  throw new Error('The front page must contain exactly fifty distinct stories.');
 }

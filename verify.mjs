@@ -6,12 +6,15 @@ import { fileURLToPath } from 'node:url';
 import { inflateSync } from 'node:zlib';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
-import { stories, sections } from './stories.mjs';
+import { stories } from './stories.mjs';
+import { leadId, cardIds, briefIds } from './frontpage.mjs';
 
-assert.equal(stories.length, 40);
-assert.equal(sections.length, 4);
-assert.equal(new Set(stories.map(story => story.id)).size, 40);
-assert.equal(new Set(stories.map(story => story.icon)).size, 40);
+assert.equal(stories.length, 50);
+assert.equal(new Set(stories.map(story => story.id)).size, 50);
+assert.equal(cardIds.length, 12);
+assert.equal(briefIds.length, 37);
+assert.equal(new Set([leadId, ...cardIds, ...briefIds]).size, 50);
+assert([leadId, ...cardIds, ...briefIds].every(id => stories.some(story => story.id === id)));
 for (const [index, story] of stories.entries()) {
   assert.equal(story.id, index + 1);
   assert.equal(story.lines.length, 2);
@@ -90,4 +93,4 @@ try {
 } finally {
   rmSync(scratch, { recursive: true, force: true });
 }
-console.log(JSON.stringify({ valid: true, width, height, bytes: png.length, validatedChunks: chunks.length, stories: stories.length, distinctIllustrations: 40, offlineRunsIdentical: true, sha256: createHash('sha256').update(png).digest('hex') }, null, 2));
+console.log(JSON.stringify({ valid: true, width, height, bytes: png.length, validatedChunks: chunks.length, stories: stories.length, largeIllustratedPanels: 1 + cardIds.length, compactBriefs: briefIds.length, offlineRunsIdentical: true, sha256: createHash('sha256').update(png).digest('hex') }, null, 2));

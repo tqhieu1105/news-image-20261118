@@ -4,7 +4,9 @@
 [![Rank](https://make.fun/badge/news-image-20261118/tqhieu1105/news-image-20261118/rank.svg)](https://make.fun/c/news-image-20261118)
 [![Reward](https://make.fun/badge/news-image-20261118/tqhieu1105/news-image-20261118/reward.svg)](https://make.fun/c/news-image-20261118)
 
-A newspaper front page with forty illustrated reports from Wednesday 18 November 2026.
+A newspaper front page with fifty reports from Wednesday 18 November 2026.
+One dominant illustrated lead and twelve large illustrated cards establish the hierarchy;
+thirty-seven compact briefs complete the coverage. A world-map strip marks seven regions.
 The editorial selection spans the inhabited continents, conflict, diplomacy, the economy,
 technology, health, climate, science, sport and culture. Selection and ordering are editorial judgments.
 
@@ -13,7 +15,8 @@ Reports of earlier events are included only for a new development or newly publi
 For example, the Voyager milestone occurred Wednesday and was confirmed Thursday;
 the Haiti story is a new verdict about an assassination in 2021.
 
-The illustrations and layout are original SVG, rasterized from HTML by headless Chromium.
+The illustrations, paper texture, woodcut hatching and layout are original SVG,
+rasterized from HTML by headless Chromium. `frontpage.mjs` contains the composition.
 The runtime uses only Node's standard library and copies the committed PNG without network access.
 
 ```sh

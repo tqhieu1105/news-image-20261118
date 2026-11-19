@@ -1,12 +1,13 @@
 # Editorial and date audit
 
 The target is Wednesday **18 November 2026**, in any time zone. Research was performed
-on 19 November. The forty-entry ledger in `stories.mjs` distinguishes an event on the
+on 19 November. The fifty-entry ledger in `stories.mjs` distinguishes an event on the
 target date from a newly published finding about an earlier period. Each entry has its
-own timing explanation and source links. The newspaper follows column order, top to bottom.
+own timing explanation and source links. `frontpage.mjs` explicitly assigns every story
+to either the lead, one of twelve illustrated cards, or one of thirty-seven briefs.
 
 The selection favors international impact while covering every inhabited region and
-the principal news fields. Forty is a constraint, not a claim that editorial importance
+the principal news fields. Fifty is a design choice, not a claim that editorial importance
 has an objective numerical ranking. Source reports were read from dated archives and
 article bodies, rather than inferred from search snippets or URL dates alone.
 
@@ -33,3 +34,11 @@ Rejected as wrong-day news: the Tuesday Nvidia earnings/board decision, Tuesday 
 religion report, Monday EU–Rwanda announcement, Tuesday release of Amazon contact
 footage, Tuesday Korean exam-security announcement, and Thursday ICJ genocide verdict.
 The Waymo freeway suspension dated to the previous Wednesday, so it was omitted too.
+
+The revision adds independently checked developments in South Africa (an official
+Competition Commission PDF dated 18 November), Brazil (CNN Brasil’s Wednesday TCU
+railway decision), India (BBC’s Wednesday Modi meeting), and the Philippines (Wednesday
+Trump–Marcos talks). Other additions are the Wednesday Alcaraz match, Lammy interview,
+German court ruling and Caucasus visits, Garcia letters, and FAA chief’s remarks.
+Candidate Pakistan, Chile and cyclone stories were omitted when direct source/date
+checks could not substantiate them to the same standard. Their claims are not in the image.
